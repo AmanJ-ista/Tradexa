@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradexa pvt ltd</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <form action='/authenticate/' method='POST' id='myform'>
+            {% csrf_token %}
+            <div>
+                <label>UserName</label> <br>
+                <input type="text" name='i1'><br>
+                <label>Password</label> <br>
+                <input type="password" name='i2'><br>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </center>
+    {%for message in messages%}
+         <p style="color:red;position:absolute;left:45%;bottom: 45%;">{{message}}</p  
+    {% endfor %} 
+
+</body>
+
+</html>
